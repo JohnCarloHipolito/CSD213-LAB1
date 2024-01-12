@@ -63,6 +63,17 @@
                 document.getElementById('message-content').innerText = "Message: No more rows to delete"
             }
         }
+
+        // delete table row from the bottom
+        function deleteRowBottom() {
+            var table1 = document.getElementById('table1')
+            if (table1.rows.length > 0) {
+                // delete index 0 (top)
+                table1.deleteRow(-1)
+            } else {
+                document.getElementById('message-content').innerText = "Message: No more rows to delete"
+            }
+        }
     </script>
 </head>
 
