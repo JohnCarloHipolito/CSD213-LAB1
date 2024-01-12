@@ -21,7 +21,7 @@
 
         .button-display {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             align-items: stretch;
         }
 
@@ -32,13 +32,28 @@
         }
     </style>
     <script>
+        // create a global variable body load to track rows
+        function initGlobals() {
+            window.rowTracker = document.getElementById('table1').rows.length
+        }
 
+        // insert row at the bottom of the table
+        function insertRowBottom() {
+            // increment row tracker for next row insert
+            window.rowTracker++
+
+            // insert row
+            var row = document.getElementById('table1').insertRow(-1)
+
+            // insert cells on the created row and use row tracker for row number
+            row.insertCell(0).textContent = "Row" + window.rowTracker + " Col1"
+            row.insertCell(1).textContent = "Row" + window.rowTracker + " Col2"
+        }
     </script>
 </head>
 
 <body onload="initGlobals()">
     <div class="main">
-        <h3>22080866 - John Carlo Hipolito</h3>
         <table id="table1">
             <tr>
                 <td>Row1 Col1</td>
