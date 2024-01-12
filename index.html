@@ -48,6 +48,9 @@
             // insert cells on the created row and use row tracker for row number
             row.insertCell(0).textContent = "Row" + window.rowTracker + " Col1"
             row.insertCell(1).textContent = "Row" + window.rowTracker + " Col2"
+
+            // clear the message after inserting
+            document.getElementById('message-content').innerText = "Message:"
         }
 
         // delete table row from the top
@@ -57,7 +60,7 @@
                 // delete index 0 (top)
                 table1.deleteRow(0)
             } else {
-                // todo - add message when there is no more to delete
+                document.getElementById('message-content').innerText = "Message: No more rows to delete"
             }
         }
     </script>
