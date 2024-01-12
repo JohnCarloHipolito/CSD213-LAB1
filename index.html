@@ -49,6 +49,17 @@
             row.insertCell(0).textContent = "Row" + window.rowTracker + " Col1"
             row.insertCell(1).textContent = "Row" + window.rowTracker + " Col2"
         }
+
+        // delete table row from the top
+        function deleteRowTop() {
+            var table1 = document.getElementById('table1')
+            if (table1.rows.length > 0) {
+                // delete index 0 (top)
+                table1.deleteRow(0)
+            } else {
+                // todo - add message when there is no more to delete
+            }
+        }
     </script>
 </head>
 
