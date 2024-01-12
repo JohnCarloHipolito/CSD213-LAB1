@@ -1,45 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSD213 Lab1</title>
     <style>
-        table, tr, td {
+        table,
+        tr,
+        td {
             border: 1px solid black;
         }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .button-display {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        table,
+        div {
+            margin: 10px 0 10px 0;
+            min-width: 400px;
+        }
     </style>
-</head>
-<body>
-    <table id="sampleTable">
-        <tr>
-            <td>Row1 Col1</td>
-            <td>Row1 Col2</td>
-        </tr>
-        <tr>
-            <td>Row2 Col1</td>
-            <td>Row2 Col2</td>
-        </tr>
-        <tr>
-            <td>Row3 Col1</td>
-            <td>Row3 Col2</td>
-        </tr>
-        <tr>
-            <td>Row4 Col1</td>
-            <td>Row4 Col2</td>
-        </tr>
-        <tr>
-            <td>Row5 Col1</td>
-            <td>Row5 Col2</td>
-        </tr>
-    </table><br />
-    <input type="button" onclick="insertRowBottom()" value="Insert row">
-    <input type="button" onclick="deleteRowTop()" value="delete row">
-    <br />
     <script>
 
-        // add code here
-
     </script>
+</head>
+
+<body onload="initGlobals()">
+    <div class="main">
+        <h3>22080866 - John Carlo Hipolito</h3>
+        <table id="table1">
+            <tr>
+                <td>Row1 Col1</td>
+                <td>Row1 Col2</td>
+            </tr>
+            <tr>
+                <td>Row2 Col1</td>
+                <td>Row2 Col2</td>
+            </tr>
+            <tr>
+                <td>Row3 Col1</td>
+                <td>Row3 Col2</td>
+            </tr>
+            <tr>
+                <td>Row4 Col1</td>
+                <td>Row4 Col2</td>
+            </tr>
+            <tr>
+                <td>Row5 Col1</td>
+                <td>Row5 Col2</td>
+            </tr>
+        </table>
+        <div class="button-display">
+            <input type="button" onclick="insertRowBottom()" value="insert row">
+            <input type="button" onclick="deleteRowTop()" value="delete row top">
+            <input type="button" onclick="deleteRowBottom()" value="delete row bottom">
+        </div>
+        <div id="message-content">Message:</div>
+    </div>
+
 </body>
+
 </html>
